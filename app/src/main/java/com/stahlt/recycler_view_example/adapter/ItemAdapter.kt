@@ -28,6 +28,7 @@ class ItemAdapter(private val context: Context, private val phrases: List<Phrase
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvTitle.text = phrases[position].toString()
+        val item = phrases[position]
+        holder.tvTitle.text = context.resources.getString(item.stringResourceId)
     }
 }
