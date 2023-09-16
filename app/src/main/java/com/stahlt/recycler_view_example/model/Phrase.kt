@@ -1,3 +1,6 @@
 package com.stahlt.recycler_view_example.model
 
-data class Phrase(val stringResourceId: Int)
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
+data class Phrase(@StringRes val stringResourceId: Int,@DrawableRes val imgResourceId: Int)
